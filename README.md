@@ -29,6 +29,9 @@ Spring 2021 version of Stanford University's course CS193p (Developing Applicati
   - Codable archiving 
   - JSON encoding/decoding
   - Error handling
+  - Wrappers: @ObservedObject, @State, @Binding, @Environment, @EnvironmentObject, @StateObject
+  - TextFields, Forms, NavigationViews, Lists, sheets, popovers, Alerts, EditMode
+  - NavigationViews, NavigationLists
 3. ***SetGame***
   - themes from MemorizeApp from scratch
 
