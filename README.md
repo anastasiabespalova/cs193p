@@ -16,9 +16,9 @@ Spring 2021 version of Stanford University's course CS193p (Developing Applicati
     -  Enumerations
     -  Protocols
     -  Closures
-  - @State, GeometryReader, @ViewBuilder
-  - AspectVGrid, Shape
-  - Access control
+    -  Access control
+  - @State, @ViewBuilder
+  - AspectVGrid, Shape, GeometryReader
   - Animations (implicit vs. explicit animations, Animation structs, transitions, matched geometry effects, the impact of container views, Shape animations, animating ViewModifiers, matchedGeometryEffect, AnimatableModifier)
 2. ***EmojiArt***
   - Collections of Identifiables, UIColor, UIImage and Item Providers
