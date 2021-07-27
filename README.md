@@ -10,11 +10,14 @@ Spring 2021 version of Stanford University's course CS193p (Developing Applicati
 
 # Contents of course
 1. MemorizeApp
-  - SwiftUI
-  - MVVM
+  - SwiftUI, MVVM
   - Swift syntax: 
-    -  Optionals
-    -  Enum
+    -  Optional
+    -  Enumerations
+    -  Protocols
+  - @State, GeometryReader, @ViewBuilder
+  - AspectVGrid, Shape
+  - Animations (implicit vs. explicit animations, Animation structs, transitions, matched geometry effects, the impact of container views, Shape animations, animating ViewModifiers, matchedGeometryEffect, AnimatableModifier)
 2. EmojiArt
 3. SetGame
 
