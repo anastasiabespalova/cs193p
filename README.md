@@ -12,6 +12,11 @@ Spring 2021 version of Stanford University's course CS193p (Developing Applicati
 1. MemorizeApp
   - SwiftUI
   - MVVM
+  - Swift syntax: 
+    -  Optionals
+    -  Enum
+2. EmojiArt
+3. SetGame
 
 <br/>
 
