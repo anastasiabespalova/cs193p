@@ -9,7 +9,7 @@ Spring 2021 version of Stanford University's course CS193p (Developing Applicati
 >
 
 # Contents
-*** 1. MemorizeApp ***
+1. ** MemorizeApp **
   - SwiftUI, MVVM
   - Swift syntax and its proper use: 
     -  Optional
