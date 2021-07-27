@@ -8,18 +8,29 @@ Spring 2021 version of Stanford University's course CS193p (Developing Applicati
 > Projects are written in **Xcode Version 12.4**.
 >
 
-# Contents of course
+# Contents
 1. MemorizeApp
   - SwiftUI, MVVM
-  - Swift syntax: 
+  - Swift syntax and its proper use: 
     -  Optional
     -  Enumerations
     -  Protocols
+    -  Closures
   - @State, GeometryReader, @ViewBuilder
   - AspectVGrid, Shape
+  - Access control
   - Animations (implicit vs. explicit animations, Animation structs, transitions, matched geometry effects, the impact of container views, Shape animations, animating ViewModifiers, matchedGeometryEffect, AnimatableModifier)
 2. EmojiArt
+  - Collections of Identifiables, UIColor, UIImage and Item Providers
+  - Grand Central Dispatch
+  - Gestures (drop, rotate, scale, tap, double tap etc.)
+  - UserDefaults
+  - The File System
+  - Codable archiving 
+  - JSON encoding/decoding
+  - Error handling
 3. SetGame
+  - themes from MemorizeApp from scratch
 
 <br/>
 
