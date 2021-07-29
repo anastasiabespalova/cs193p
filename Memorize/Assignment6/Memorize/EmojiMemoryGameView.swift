@@ -26,7 +26,8 @@ struct EmojiMemoryGameView: View {
                     }
                 }
             }
-            .foregroundColor(game.getContentColor())
+           // .foregroundColor(game.getContentColor())
+            .foregroundColor(.red)
             .padding(.horizontal)
             
             Spacer()
@@ -34,7 +35,7 @@ struct EmojiMemoryGameView: View {
                 Text("Score: \(game.getScore())").font(.largeTitle)
                 Spacer()
                 Button(action: {
-                    game.createMemoryGame()
+                    game.createMemoryGame(theme: game.currentThemeModel)
                 }, label: {
                     VStack {
                         Image(systemName: "arrow.clockwise")
@@ -85,10 +86,11 @@ struct CardView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        let game = EmojiMemoryGame()
+        Text("Hello world")
+       /* let game = EmojiMemoryGame()
         EmojiMemoryGameView(game: game)
             .preferredColorScheme(.dark)
         EmojiMemoryGameView(game: game)
-            .preferredColorScheme(.light)
+            .preferredColorScheme(.light)*/
     }
 }

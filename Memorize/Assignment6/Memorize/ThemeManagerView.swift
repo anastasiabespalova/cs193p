@@ -9,14 +9,11 @@ import SwiftUI
 
 struct ThemeManagerView: View {
     @EnvironmentObject var store: ThemeStore
-   // var store: ThemeStore
     
-    // a Binding to a PresentationMode
-    // which lets us dismiss() ourselves if we are isPresented
-   // @Environment(\.presentationMode) var presentationMode
+    @State var showingUpdateThemeView = false
+    @State private var selectedThemeId = 0
+    @State private var addNewTheme = false
     
-    // we inject a Binding to this in the environment for the List and EditButton
-    // using the \.editMode in EnvironmentValues
     @State private var editMode: EditMode = .inactive
     
     var body: some View {
@@ -25,20 +22,26 @@ struct ThemeManagerView: View {
                 Text("Memorize")
                     .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                 ForEach(store.themes) { theme in
-                    
-                    NavigationLink(destination: ThemeEditor(theme: $store.themes[theme])) {
+                    let game = EmojiMemoryGame(theme: theme)
+                    NavigationLink(destination: EmojiMemoryGameView(game: game)) {
+                   // NavigationLink(destination: ThemeEditor(theme: $store.themes[theme])) {
                         VStack(alignment: .leading) {
                             Text(theme.name)
                                 .foregroundColor(Color(rgbaColor: theme.color))
                             Text(getText(areAllUsed: (theme.numberOfPairs == theme.emojis.count), numberOfPairs: theme.numberOfPairs) + theme.emojis)
                                 .font(.footnote)
                         }
-                                
-                        // tapping when NOT in editMode will follow the NavigationLink
-                        // (that's why gesture is set to nil in that case)
-                        .gesture(editMode == .active ? tap : nil)
+                        .onTapGesture {
+                            selectedThemeId = theme.id
+                            showingUpdateThemeView = true
+                            addNewTheme = true
+                        }
+
+                       // .gesture(editMode == .active ? tap : nil)
+                      
                     }
                 }
+
                 // teach the ForEach how to delete items
                 // at the indices in indexSet from its array
                 .onDelete { indexSet in
@@ -70,13 +73,25 @@ struct ThemeManagerView: View {
     }
     
     var tap: some Gesture {
-        TapGesture().onEnded { }
+        TapGesture().onEnded {  }
     }
+    
+    var tapToRunGame: some Gesture {
+        TapGesture(count: 1).onEnded { print("tapToRunGame") }
+    }
+    
+    var tapToEditTheme: some Gesture {
+        TapGesture(count: 1).onEnded { print("tapToRunGame") }
+    }
+    
+    
     
     var addThemeButton: some View {
            Button {
                withAnimation {
-                    
+                   // selectedThemeId = 0
+                    showingUpdateThemeView = true
+                    addNewTheme = true
                }
                
            } label: {

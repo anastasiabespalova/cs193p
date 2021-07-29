@@ -15,7 +15,7 @@ import SwiftUI
 class EmojiMemoryGame: ObservableObject {
     typealias Card = MemoryGame<String>.Card
     
-    private var setOfThemes = [
+  /*  private var setOfThemes = [
         Theme<String>(setOfContent: ["🚘", "🚝", "🚁", "🛶", "🚗", "🚕", "🚙", "🚌", "🚎", "🏎", "🚓", "🚑", "🚜", "🛴", "🚲", "🛵", "🏍", "🛺", "🚨", "🚔", "🚍", "🚖", "🚡", "🚃", "🚂", "🚊", "✈️", "🚀"],
                       numberOfPairs: 10,
                       colorOfTheme: "red",
@@ -34,12 +34,11 @@ class EmojiMemoryGame: ObservableObject {
                       randomNumberOfPairs: true,
                       colorOfTheme: "green",
                       nameOfTheme: "Plants")
-    ]
+    ] */
     
-    init() {
-        let currentTheme = Theme<String>(theme: setOfThemes.randomElement()!)
+    init(theme: ThemeForEmojis) {
+        let currentTheme = theme
         let uniqueContent = currentTheme.returnContentForTheGame()
-        
         model = MemoryGame<String>(numberOfPairsOfCards: currentTheme.numberOfPairs) { pairIndex in
             uniqueContent[pairIndex]
         }
@@ -47,7 +46,7 @@ class EmojiMemoryGame: ObservableObject {
     }
 
     @Published private var model: MemoryGame<String>
-    @Published private var currentThemeModel: Theme<String>
+    @Published var currentThemeModel: ThemeForEmojis
     
     var cards: Array<Card> {
         model.cards
@@ -60,8 +59,9 @@ class EmojiMemoryGame: ObservableObject {
         model.choose(card)
     }
     
-    func createMemoryGame() {
-        let currentTheme = Theme<String>(theme: setOfThemes.randomElement()!)
+    func createMemoryGame(theme: ThemeForEmojis) {
+       // let currentTheme = Theme<String>(theme: setOfThemes.randomElement()!)
+        let currentTheme = theme
         let uniqueContent = currentTheme.returnContentForTheGame()
         
         model = MemoryGame<String>(numberOfPairsOfCards: currentTheme.numberOfPairs) { pairIndex in
@@ -72,8 +72,8 @@ class EmojiMemoryGame: ObservableObject {
     
     
     
-    func getContentColor () -> Color {
-        switch currentThemeModel.colorOfTheme {
+    /*func getContentColor () -> Color {
+        switch currentThemeModel.color {
         case "red":
             return .red
         case "blue":
@@ -87,10 +87,10 @@ class EmojiMemoryGame: ObservableObject {
         default:
             return .red
         }
-    }
+    } */
     
     func getThemeName () -> String {
-        return currentThemeModel.nameOfTheme
+        return currentThemeModel.name
     }
     
     func getScore () -> Int {

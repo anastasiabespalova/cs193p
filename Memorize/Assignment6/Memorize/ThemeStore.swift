@@ -21,6 +21,15 @@ struct ThemeForEmojis: Identifiable, Codable, Hashable {
         self.numberOfPairs = numberOfPairs
         self.id = id
     }
+    
+    func returnContentForTheGame() -> Array<String>{
+        let shuffledArray = emojis.shuffled()
+        var uniqueRandomContentForGame: Array<String> = []
+        for pairIndex in 0..<numberOfPairs {
+            uniqueRandomContentForGame.append(String(shuffledArray[pairIndex]))
+        }
+        return uniqueRandomContentForGame
+    }
 }
 
 class ThemeStore: ObservableObject {
