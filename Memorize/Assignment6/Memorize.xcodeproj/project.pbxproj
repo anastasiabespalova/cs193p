@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3303394926B307BA008D9302 /* ThemeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3303394826B307BA008D9302 /* ThemeStore.swift */; };
+		3303394B26B3080B008D9302 /* RGBAColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3303394A26B3080B008D9302 /* RGBAColor.swift */; };
+		3303394D26B30CA8008D9302 /* ThemeManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3303394C26B30CA8008D9302 /* ThemeManagerView.swift */; };
+		3303394F26B31C45008D9302 /* ThemeEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3303394E26B31C45008D9302 /* ThemeEditorView.swift */; };
+		3303395126B32489008D9302 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3303395026B32489008D9302 /* Utils.swift */; };
 		33EE669C269F2BCD0071CFF0 /* MemorizeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EE669B269F2BCD0071CFF0 /* MemorizeApp.swift */; };
 		33EE669E269F2BCD0071CFF0 /* EmojiMemoryGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EE669D269F2BCD0071CFF0 /* EmojiMemoryGameView.swift */; };
 		33EE66A0269F2BCE0071CFF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33EE669F269F2BCE0071CFF0 /* Assets.xcassets */; };
@@ -17,6 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3303394826B307BA008D9302 /* ThemeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeStore.swift; sourceTree = "<group>"; };
+		3303394A26B3080B008D9302 /* RGBAColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBAColor.swift; sourceTree = "<group>"; };
+		3303394C26B30CA8008D9302 /* ThemeManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManagerView.swift; sourceTree = "<group>"; };
+		3303394E26B31C45008D9302 /* ThemeEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeEditorView.swift; sourceTree = "<group>"; };
+		3303395026B32489008D9302 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		33EE6698269F2BCD0071CFF0 /* Memorize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memorize.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33EE669B269F2BCD0071CFF0 /* MemorizeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeApp.swift; sourceTree = "<group>"; };
 		33EE669D269F2BCD0071CFF0 /* EmojiMemoryGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGameView.swift; sourceTree = "<group>"; };
@@ -59,6 +69,11 @@
 			isa = PBXGroup;
 			children = (
 				33EE669B269F2BCD0071CFF0 /* MemorizeApp.swift */,
+				3303394826B307BA008D9302 /* ThemeStore.swift */,
+				3303394C26B30CA8008D9302 /* ThemeManagerView.swift */,
+				3303394E26B31C45008D9302 /* ThemeEditorView.swift */,
+				3303395026B32489008D9302 /* Utils.swift */,
+				3303394A26B3080B008D9302 /* RGBAColor.swift */,
 				33EE669D269F2BCD0071CFF0 /* EmojiMemoryGameView.swift */,
 				33EE66AB26A1B4AF0071CFF0 /* MemoryGame.swift */,
 				33EE66B126A33ACE0071CFF0 /* MemoryGameTheme.swift */,
@@ -148,9 +163,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				33EE66AC26A1B4AF0071CFF0 /* MemoryGame.swift in Sources */,
+				3303394926B307BA008D9302 /* ThemeStore.swift in Sources */,
+				3303394D26B30CA8008D9302 /* ThemeManagerView.swift in Sources */,
 				33EE669E269F2BCD0071CFF0 /* EmojiMemoryGameView.swift in Sources */,
 				33EE66B226A33ACE0071CFF0 /* MemoryGameTheme.swift in Sources */,
+				3303395126B32489008D9302 /* Utils.swift in Sources */,
+				3303394B26B3080B008D9302 /* RGBAColor.swift in Sources */,
 				33EE669C269F2BCD0071CFF0 /* MemorizeApp.swift in Sources */,
+				3303394F26B31C45008D9302 /* ThemeEditorView.swift in Sources */,
 				33EE66AF26A1B8380071CFF0 /* EmojiMemoryGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
