@@ -33,6 +33,13 @@ Spring 2021 version of Stanford University's course CS193p (Developing Applicati
   - TextFields, Forms, NavigationViews, Lists, sheets, popovers, EditMode
   - NavigationViews, NavigationLists
   - Alert
+  - Publisher protocol
+  - CloudKit, CoreData review
+  - Document Architecture
+  - App and Scene protocols
+  - WindowGroup, DocumentGroup, @SceneStorage
+  - @ScaledMetric
+  - Undo/Redo
 3. ***SetGame***
   - themes from MemorizeApp from scratch
 
@@ -43,7 +50,7 @@ Spring 2021 version of Stanford University's course CS193p (Developing Applicati
 
 Type                                | Quantity  | Completion
 :---                                |  :---:  |   :---:
-Lectures                            | 12 / 18 |   67%
+Lectures                            | 14 / 18 |   78%
 **Assignment I (not commited)**     | 10 / 10 | **100%**
 Extra credits (not commited)        |  2 / 2  | *+100%*
 **Assignment II**                   | 16 / 16 | **100%**
