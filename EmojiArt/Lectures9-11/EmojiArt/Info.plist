@@ -105,6 +105,11 @@
 			</dict>
 		</dict>
 	</array>
-<key>UISupportsDocumentBrowser</key> 	<true/> 	<key>LSSupportsOpeningDocumentsInPlace</key> 	<true/>
+	<key>UISupportsDocumentBrowser</key>
+	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>The camera can be used to set the background of an EmojiArt document</string>
+	<key>LSSupportsOpeningDocumentsInPlace</key>
+	<true/>
 </dict>
 </plist>

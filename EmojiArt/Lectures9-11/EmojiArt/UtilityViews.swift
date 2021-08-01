@@ -62,6 +62,23 @@ struct AnimatedActionButton: View {
 struct IdentifiableAlert: Identifiable {
     var id: String
     var alert: () -> Alert
+    
+    init(id: String, alert: @escaping () -> Alert) {
+        self.id = id
+        self.alert = alert
+    }
+    
+    // L15 convenience init added between L14 and L15
+    init(id: String, title: String, message: String) {
+        self.id = id
+        alert = { Alert(title: Text(title), message: Text(message), dismissButton: .default(Text("OK"))) }
+    }
+    
+    // L15 convenience init added between L14 and L15
+    init(title: String, message: String) {
+        self.id = title + message
+        alert = { Alert(title: Text(title), message: Text(message), dismissButton: .default(Text("OK"))) }
+    }
 }
 
 // a button that does undo (preferred) or redo
@@ -117,5 +134,76 @@ extension UndoManager {
     }
     var optionalRedoMenuItemTitle: String? {
         canRedo ? redoMenuItemTitle : nil
+    }
+}
+
+extension View {
+    @ViewBuilder
+    func wrappedInNavigationViewToMakeDismissable(_ dismiss: (() -> Void)?) -> some View {
+        if UIDevice.current.userInterfaceIdiom != .pad, let dismiss = dismiss {
+            NavigationView {
+                self
+                    .navigationBarTitleDisplayMode(.inline)
+                    .dismissable(dismiss)
+            }
+            .navigationViewStyle(StackNavigationViewStyle())
+        } else {
+            self
+        }
+    }
+    
+    @ViewBuilder
+    func dismissable(_ dismiss: (() -> Void)?) -> some View  {
+        if UIDevice.current.userInterfaceIdiom != .pad, let dismiss = dismiss {
+            self.toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("Close") { dismiss() }
+                }
+            }
+        } else {
+            self
+        }
+    }
+}
+
+
+extension View {
+    // L15 modifier which replaces uses of .toolbar
+    // L15 in horizontally compact environments, it puts a single button in the toolbar
+    // L15 with a context menu containing the items
+    // L15 (only works on ViewBuilder content, not ToolbarItems content)
+    func compactableToolbar<Content>(@ViewBuilder content: () -> Content) -> some View where Content: View {
+        self.toolbar {
+            content().modifier(CompactableIntoContextMenu())
+        }
+    }
+}
+
+// L15 the ViewModifier behind compactableToolbar
+// L15 takes a ViewBuilder View and makes either
+// L15 a single button with a context menu with the content (if horizontally compact)
+// L15 or just returns the content unchanged (if horizontally regular)
+struct CompactableIntoContextMenu: ViewModifier {
+    // L16 there's no size class on Mac, everything is not compact
+    #if os(iOS)
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    var compact: Bool { horizontalSizeClass == .compact }
+    #else
+    let compact = false
+    #endif
+    
+    func body(content: Content) -> some View {
+        if compact {
+            Button {
+                
+            } label: {
+                Image(systemName: "ellipsis.circle")
+            }
+            .contextMenu {
+                content
+            }
+        } else {
+            content
+        }
     }
 }

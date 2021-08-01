@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3303399426B6BE7D008D9302 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3303399326B6BE7D008D9302 /* Camera.swift */; };
+		3303399626B6C980008D9302 /* PhotoLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3303399526B6C980008D9302 /* PhotoLibrary.swift */; };
 		33187F7126B09AC9007FE7F4 /* PaletteChooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33187F7026B09AC9007FE7F4 /* PaletteChooser.swift */; };
 		33187F7426B0B09F007FE7F4 /* PaletteEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33187F7326B0B09F007FE7F4 /* PaletteEditor.swift */; };
 		33187F7726B0BA8D007FE7F4 /* PaletteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33187F7626B0BA8D007FE7F4 /* PaletteManager.swift */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3303399326B6BE7D008D9302 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		3303399526B6C980008D9302 /* PhotoLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibrary.swift; sourceTree = "<group>"; };
 		33187F7026B09AC9007FE7F4 /* PaletteChooser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteChooser.swift; sourceTree = "<group>"; };
 		33187F7326B0B09F007FE7F4 /* PaletteEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteEditor.swift; sourceTree = "<group>"; };
 		33187F7626B0BA8D007FE7F4 /* PaletteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteManager.swift; sourceTree = "<group>"; };
@@ -74,6 +78,8 @@
 				338EE22926AAC5CC0038BD99 /* UtilityViews.swift */,
 				338EE21026AAAB820038BD99 /* EmojiArtApp.swift */,
 				338EE21226AAAB820038BD99 /* EmojiArtDocumentView.swift */,
+				3303399526B6C980008D9302 /* PhotoLibrary.swift */,
+				3303399326B6BE7D008D9302 /* Camera.swift */,
 				33187F7026B09AC9007FE7F4 /* PaletteChooser.swift */,
 				33187F7326B0B09F007FE7F4 /* PaletteEditor.swift */,
 				33187F7626B0BA8D007FE7F4 /* PaletteManager.swift */,
@@ -166,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				338EE21326AAAB820038BD99 /* EmojiArtDocumentView.swift in Sources */,
+				3303399626B6C980008D9302 /* PhotoLibrary.swift in Sources */,
 				33187F7726B0BA8D007FE7F4 /* PaletteManager.swift in Sources */,
 				338EE23426B0206B0038BD99 /* PaletteStore.swift in Sources */,
 				33187F7426B0B09F007FE7F4 /* PaletteEditor.swift in Sources */,
@@ -173,6 +180,7 @@
 				338EE22726AAC1F40038BD99 /* EmojiArtDocument.swift in Sources */,
 				338EE22C26AAC5CD0038BD99 /* UtilityExtensions.swift in Sources */,
 				338EE22126AAAFEA0038BD99 /* EmojiArtModel.swift in Sources */,
+				3303399426B6BE7D008D9302 /* Camera.swift in Sources */,
 				338EE22426AABD040038BD99 /* EmojiArtModel.Background.swift in Sources */,
 				338EE22B26AAC5CD0038BD99 /* UtilityViews.swift in Sources */,
 				33187F7126B09AC9007FE7F4 /* PaletteChooser.swift in Sources */,
