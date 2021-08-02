@@ -40,9 +40,14 @@ Spring 2021 version of Stanford University's course CS193p (Developing Applicati
   - WindowGroup, DocumentGroup, @SceneStorage
   - @ScaledMetric
   - Undo/Redo
+  - UIKit Integration
+  - Multiplatform (macOS + iOS)
 3. ***SetGame***
   - themes from MemorizeApp from scratch
 
+4. **Enroute**
+  - Picker, Toggle
+  - CoreData
 <br/>
 
 
@@ -50,7 +55,7 @@ Spring 2021 version of Stanford University's course CS193p (Developing Applicati
 
 Type                                | Quantity  | Completion
 :---                                |  :---:  |   :---:
-Lectures                            | 14 / 18 |   78%
+Lectures                            | 18 / 18 |   100%
 **Assignment I (not commited)**     | 10 / 10 | **100%**
 Extra credits (not commited)        |  2 / 2  | *+100%*
 **Assignment II**                   | 16 / 16 | **100%**
