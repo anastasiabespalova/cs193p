@@ -43,7 +43,7 @@ Spring 2021 version of Stanford University's course CS193p (Developing Applicati
   - UIKit Integration
   - Multiplatform (macOS + iOS)
 3. ***SetGame***
-  - themes from MemorizeApp from scratch
+  - themes from MemorizeApp from scratch 
 
 4. **Enroute**
   - Picker, Toggle
