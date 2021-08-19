@@ -5,7 +5,7 @@ Spring 2021 version of Stanford University's course CS193p (Developing Applicati
 > 
 > Solutions for [Stanford CS193p 2021](https://cs193p.sites.stanford.edu) course assignments and source code for demos.
 >
-> Projects are written in **Xcode Version 12.4**.
+> Projects are written in **Xcode Version 12.4**. 
 >
 
 # Contents
