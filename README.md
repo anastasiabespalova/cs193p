@@ -1,6 +1,6 @@
 # cs193p
 Spring 2021 version of Stanford University's course CS193p (Developing Applications for iOS using SwiftUI)
-
+ 
 # Course Stanford CS193p 2021 - Developing Apps for iOS
 > 
 > Solutions for [Stanford CS193p 2021](https://cs193p.sites.stanford.edu) course assignments and source code for demos.
